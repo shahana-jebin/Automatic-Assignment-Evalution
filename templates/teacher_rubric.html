@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block title %}
+Teacher Rubric
+{% endblock %}
+
+{% block content %}
+
+<div class="card">
+
+    <h1>👩‍🏫 Create Evaluation Rubric</h1>
+
+    <p>
+        Enter the question and expected meaning for each criterion.
+        The AI will use this information to evaluate student answers.
+    </p>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <h2>Question</h2>
+
+        <textarea
+            name="question"
+            placeholder="Enter the question given to the student"
+            required></textarea>
+
+
+        <h2>1. Introduction</h2>
+
+        <label>Marks</label>
+
+        <input
+            type="number"
+            name="introduction_marks"
+            value="2"
+            min="0"
+            step="0.5"
+            required>
+
+        <label>Expected Meaning</label>
+
+        <textarea
+            name="introduction_expected"
+            placeholder="What should the introduction contain?"
+            required></textarea>
+
+
+        <h2>2. Explanation of Theory or Idea</h2>
+
+        <p>
+            Add the concepts that should be present in the answer.
+        </p>
+
+        <div class="card">
+
+            <label>Criterion</label>
+
+            <input
+                type="text"
+                name="explanation_criterion"
+                placeholder="Example: Process Management">
+
+            <label>Expected Meaning</label>
+
+            <textarea
+                name="explanation_expected"
+                placeholder="What should the student explain?"></textarea>
+
+            <label>Marks</label>
+
+            <input
+                type="number"
+                name="explanation_marks"
+                min="0"
+                step="0.5"
+                placeholder="Example: 1.5">
+
+        </div>
+
+
+        <h2>3. Clarity, Style, Structure and Organization</h2>
+
+        <label>Marks</label>
+
+        <input
+            type="number"
+            name="clarity_marks"
+            value="3"
+            min="0"
+            step="0.5"
+            required>
+
+
+        <h2>4. Clear Conclusion</h2>
+
+        <label>Marks</label>
+
+        <input
+            type="number"
+            name="conclusion_marks"
+            value="2"
+            min="0"
+            step="0.5"
+            required>
+
+        <label>Expected Meaning</label>
+
+        <textarea
+            name="conclusion_expected"
+            placeholder="What should the conclusion contain?"
+            required></textarea>
+
+
+        <h2>5. Bibliography / Reference</h2>
+
+        <label>Marks</label>
+
+        <input
+            type="number"
+            name="bibliography_marks"
+            value="2"
+            min="0"
+            step="0.5"
+            required>
+
+
+        <button type="submit">
+            💾 Save Rubric
+        </button>
+
+    </form>
+
+</div>
+
+{% endblock %}

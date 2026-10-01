@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+{% block title %}
+Evaluation Results
+{% endblock %}
+
+{% block content %}
+
+<div class="card">
+
+    <h1>📊 Evaluation Results</h1>
+
+    <a
+        href="/download-csv/"
+        class="button">
+
+        Download CSV
+
+    </a>
+
+</div>
+
+
+{% for item in results %}
+
+<div class="card">
+
+    <h2>
+        👨‍🎓 {{ item.student }}
+    </h2>
+
+    <p>
+        <b>File:</b>
+        {{ item.filename }}
+    </p>
+
+    <h3>
+        Question
+    </h3>
+
+    <p>
+        {{ item.question }}
+    </p>
+
+
+    <hr>
+
+
+    <h2>
+        🎯 Question Relevance
+    </h2>
+
+    <p>
+        Semantic Relevance:
+        <b>
+            {{ item.question_relevance.score }}%
+        </b>
+    </p>
+
+    <p>
+        Matched Answer:
+        {{ item.question_relevance.matched_text }}
+    </p>
+
+
+    <hr>
+
+
+    <h2>
+        📌 Marks
+    </h2>
+
+    <p>
+        Introduction:
+        <b>
+            {{ item.introduction.marks }} / 2
+        </b>
+    </p>
+
+    <p>
+        Explanation:
+        <b>
+            {{ item.explanation.marks }} / 6
+        </b>
+    </p>
+
+    <p>
+        Clarity:
+        <b>
+            {{ item.clarity.marks }} / 3
+        </b>
+    </p>
+
+    <p>
+        Conclusion:
+        <b>
+            {{ item.conclusion.marks }} / 2
+        </b>
+    </p>
+
+    <p>
+        Bibliography:
+        <b>
+            {{ item.bibliography.marks }} / 2
+        </b>
+    </p>
+
+
+    <hr>
+
+
+    <h1>
+        Total:
+        {{ item.total }}
+        /
+        {{ item.maximum }}
+    </h1>
+
+    <h2>
+        Percentage:
+        {{ item.percentage }}%
+    </h2>
+
+
+    <hr>
+
+
+    <h3>
+        🔤 Token Information
+    </h3>
+
+    <p>
+        Total Tokens:
+        {{ item.token_count }}
+    </p>
+
+</div>
+
+{% empty %}
+
+<div class="card">
+
+    <h2>
+        No results available.
+    </h2>
+
+</div>
+
+{% endfor %}
+
+{% endblock %}

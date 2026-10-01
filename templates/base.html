@@ -1,0 +1,89 @@
+<!DOCTYPE html> <html lang="en"> <head>
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>
+    {% block title %}
+    Automatic Assignment Evaluation
+    {% endblock %}
+</title>
+
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background: #1f2937;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    main {
+        width: 90%;
+        max-width: 1000px;
+        margin: 30px auto;
+    }
+
+    .card {
+        background: white;
+        padding: 25px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    textarea {
+        width: 100%;
+        min-height: 100px;
+        padding: 10px;
+        margin: 10px 0 20px;
+        box-sizing: border-box;
+    }
+
+    input {
+        padding: 10px;
+        margin: 10px 0 20px;
+    }
+
+    button,
+    .button {
+        display: inline-block;
+        background: #2563eb;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 6px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    button:hover,
+    .button:hover {
+        background: #1d4ed8;
+    }
+
+    hr {
+        margin: 25px 0;
+    }
+
+</style>
+
+</head> <body> <header>
+<h1>
+    Automatic Assignment Evaluation
+</h1>
+
+</header> <main>
+{% block content %}
+{% endblock %}
+
+</main> </body> </html>

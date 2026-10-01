@@ -1,0 +1,27 @@
+{
+    "question": "Describe the concept of DevOps, explaining its definition, need, and key benefits in modern software development. Also, outline the 7 C\u2019s of DevOps and list commonly used DevOps tools",
+    "introduction": {
+        "marks": 2.0,
+        "expected": "Defines DevOps as a combination of Development and Operations practices that promotes collaboration, automation, and continuous software development and delivery."
+    },
+    "explanation": {
+        "marks": 6.0,
+        "concepts": [
+            {
+                "criterion": "Need for DevOps, Key Benefits of DevOps, 7 C\u2019s of DevOps, Commonly Used DevOps Tools",
+                "expected": "Explains the need for DevOps, including faster software delivery, better collaboration, automation, and reliable deployment., Explains benefits such as faster delivery, improved collaboration, continuous integration/delivery, better reliability, quality, and faster feedback.Identifies and explains Continuous Development, Continuous Integration, Continuous Testing, Continuous Deployment, Continuous Delivery, Continuous Monitoring, and Continuous Feedback, Lists commonly used tools such as Git, Jenkins, Docker, Kubernetes, Ansible, Terraform, Selenium, Maven, Prometheus, and Grafana.",
+                "marks": 6.0
+            }
+        ]
+    },
+    "clarity": {
+        "marks": 3.0
+    },
+    "conclusion": {
+        "marks": 2.0,
+        "expected": "Summarizes the importance of DevOps in modern software development, emphasizing collaboration, automation, continuous delivery, and improved software development efficiency."
+    },
+    "bibliography": {
+        "marks": 2.0
+    }
+}

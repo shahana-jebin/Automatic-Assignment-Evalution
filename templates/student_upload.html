@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}
+Upload Answer Sheets
+{% endblock %}
+
+{% block content %}
+
+<div class="card">
+
+    <h1>👨‍🎓 Upload Answer Sheet</h1>
+
+    <h2>Question</h2>
+
+    <p>
+        {{ rubric.question }}
+    </p>
+
+    <hr>
+
+    <h2>📄 Select Answer Sheet PDF</h2>
+
+    <form
+        method="POST"
+        enctype="multipart/form-data">
+
+        {% csrf_token %}
+
+        <input
+            type="file"
+            name="answer_sheets"
+            accept=".pdf"
+            multiple
+            required>
+
+        <br>
+
+        <button type="submit">
+            🤖 Evaluate Answer Sheet
+        </button>
+
+    </form>
+
+</div>
+
+
+<div class="card">
+
+    <h2>📋 Teacher Rubric</h2>
+
+    <p>
+        Introduction:
+        {{ rubric.introduction.marks }} marks
+    </p>
+
+    <p>
+        Explanation:
+        {{ rubric.explanation.marks }} marks
+    </p>
+
+    <p>
+        Clarity:
+        {{ rubric.clarity.marks }} marks
+    </p>
+
+    <p>
+        Conclusion:
+        {{ rubric.conclusion.marks }} marks
+    </p>
+
+    <p>
+        Bibliography:
+        {{ rubric.bibliography.marks }} marks
+    </p>
+
+    <hr>
+
+    <h3>Total:  {{ rubric.introduction.marks|add:rubric.explanation.marks|add:rubric.clarity.marks|add:rubric.conclusion.marks|add:rubric.bibliography.marks }} Marks</h3>
+
+</div>
+
+{% endblock %}

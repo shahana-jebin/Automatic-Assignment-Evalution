@@ -1,0 +1,27 @@
+{
+    "question": "Describe the concept of DevOps, explaining its definition, need and key benefits in modern software development. Explain the 7 C\u2019s of DevOps and their meaning and usage.",
+    "introduction": {
+        "marks": 2.0,
+        "expected": "Introduce DevOps as a combination of development and operations practices. Briefly explain how DevOps improves collaboration, automation, continuous delivery and software development/deployment."
+    },
+    "explanation": {
+        "marks": 6.0,
+        "concepts": [
+            {
+                "criterion": "DevOps Concept, Need, Benefits and 7 C's",
+                "expected": "The answer should explain the definition and concept of DevOps, its need in modern software development, and its major benefits. It should also explain all 7 C\u2019s of DevOps with their meaning and usage: Continuous Development, Continuous Integration, Continuous Testing, Continuous Deployment, Continuous Delivery, Continuous Monitoring and Continuous Collaboration.",
+                "marks": 6.0
+            }
+        ]
+    },
+    "clarity": {
+        "marks": 3.0
+    },
+    "conclusion": {
+        "marks": 2.0,
+        "expected": "Summarize how DevOps improves software development by promoting collaboration, automation, continuous integration and delivery, faster deployment, reliable software and continuous improvement."
+    },
+    "bibliography": {
+        "marks": 2.0
+    }
+}

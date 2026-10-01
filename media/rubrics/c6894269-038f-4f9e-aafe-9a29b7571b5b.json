@@ -1,0 +1,27 @@
+{
+    "question": "explain the different preprocessing techniques used in data processing",
+    "introduction": {
+        "marks": 2.0,
+        "expected": "student should introduce data processing and explain that it is the process of cleaning, transforming, and preparing raw data before using it for data analysis or machine learning.the student should mention why processing is important."
+    },
+    "explanation": {
+        "marks": 6.0,
+        "concepts": [
+            {
+                "criterion": "data preprocesssing techniques",
+                "expected": "Student should clearly explain the important preprocessing techniques, such as:\r\n\r\n    Data cleaning \u2013 handling missing values, duplicate data and incorrect data.\r\n    Data integration \u2013 combining data from different sources.\r\n    Data transformation \u2013 converting data into a suitable format.\r\n    Data normalization/standardization \u2013 bringing values to a common scale.\r\n    Data reduction \u2013 reducing the size of data while keeping important information.\r\n    Handling categorical data \u2013 converting categorical values into numerical form using techniques such as encoding.\r\n\r\nEach technique should be explained with its purpose and, where appropriate, a simple example.",
+                "marks": 6.0
+            }
+        ]
+    },
+    "clarity": {
+        "marks": 3.0
+    },
+    "conclusion": {
+        "marks": 2.0,
+        "expected": "Student should conclude that preprocessing converts raw data into clean, consistent and suitable data for analysis or machine learning. It helps improve the quality and reliability of the results."
+    },
+    "bibliography": {
+        "marks": 2.0
+    }
+}

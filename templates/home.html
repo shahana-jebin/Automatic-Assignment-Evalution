@@ -1,0 +1,88 @@
+<!DOCTYPE html> <html lang="en"> <head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>
+    Automatic Assignment Evaluation
+</title>
+
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 80px auto;
+        padding: 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    h1 {
+        color: #1f2937;
+    }
+
+    p {
+        color: #555;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 14px 25px;
+        background: #2563eb;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    .button:hover {
+        background: #1d4ed8;
+    }
+
+</style>
+
+</head> <body> <div class="container">
+<div class="card">
+
+    <h1>
+        🤖 Automatic Assignment Evaluation
+    </h1>
+
+    <p>
+        Evaluate handwritten student assignments
+        automatically using AI.
+    </p>
+
+    <p>
+        Create a teacher rubric, upload student
+        answer sheets, extract handwritten text,
+        and evaluate the answers.
+    </p>
+
+    <a href="{% url 'teacher_rubric' %}"
+       class="button">
+
+        👩‍🏫 Create Evaluation Rubric
+
+    </a>
+
+</div>
+
+</div> </body> </html>
